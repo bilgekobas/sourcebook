@@ -22,7 +22,23 @@
     header { position: static !important; }
   }
 </style>
-</head>
+
+    <script>
+      (function(){
+        function setSourcebookStickyTop(){
+          var header = document.querySelector('header');
+          if (!header) return;
+          var h = Math.ceil(header.getBoundingClientRect().height);
+          document.documentElement.style.setProperty('--sourcebook-sticky-top', (h + 72) + 'px');
+        }
+        window.addEventListener('load', setSourcebookStickyTop);
+        window.addEventListener('resize', setSourcebookStickyTop);
+        document.addEventListener('DOMContentLoaded', setSourcebookStickyTop);
+        setTimeout(setSourcebookStickyTop, 250);
+        setTimeout(setSourcebookStickyTop, 1000);
+      })();
+    </script>
+  </head>
   <body>
     <div id="root"></div>
   </body>
