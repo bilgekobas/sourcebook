@@ -13,7 +13,7 @@
       body { background: #F3F3F3; }
       select option { background: #F3F3F3; }
     </style>
-    <script type="module" crossorigin src="/sourcebook/assets/index-CRcKW9Id.js"></script>
+    <script type="module" crossorigin src="/sourcebook/assets/index-sourcebook-final-v17.js"></script>
   
 <style>
   select option { color: #3D00F5 !important; background: #F3F3F3 !important; }
@@ -29,7 +29,7 @@
           var header = document.querySelector('header');
           if (!header) return;
           var h = Math.ceil(header.getBoundingClientRect().height);
-          document.documentElement.style.setProperty('--sourcebook-sticky-top', (h + 72) + 'px');
+          document.documentElement.style.setProperty('--sourcebook-sticky-top', (h + 4) + 'px');
         }
         window.addEventListener('load', setSourcebookStickyTop);
         window.addEventListener('resize', setSourcebookStickyTop);
